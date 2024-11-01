@@ -56,7 +56,7 @@ ScrollReveal().reveal('.home-content p, .about-content ',{ origin:'right'});
 /*==================== typed js ====================*/
 
 const typed = new Typed('.multiple-text',{
-    strings:['Frontend Developer', "Coder...", "AI Enthusiast...","FullstackDeveloper..."],
+    strings:['Frontend Developer', "Competitive", "AI Enthusiast...","FullstackDeveloper..."],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
@@ -82,7 +82,16 @@ githubLink.addEventListener('click', () => {
 // Handle form submission
 document.getElementById('contact-form').addEventListener('submit', function(event) {
   event.preventDefault(); // Prevent default form submission
-
+  var name = $("#name").val();
+  var email = $("#email").val();
+  var phone = $("#mobile number").val(); 1 
+  var templateParams = {
+    to_name: "Recipient Name",
+    from_name: name,
+    from_email: email,
+    from_phone: phone,
+    // ... other template parameters
+};
   // Send email
   emailjs.sendForm('service_0d6j5o1', 'template_fzck8vb', this)
       .then(function() {
